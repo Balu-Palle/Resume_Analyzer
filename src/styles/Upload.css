@@ -1,0 +1,119 @@
+/* Upload.css */
+.upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  background-color: var(--light-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--box-shadow);
+  max-width: 800px;
+  margin: 2rem auto;
+  transition: var(--transition);
+}
+
+.upload-container h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.upload-container p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.dropzone {
+  width: 100%;
+  height: 200px;
+  border: 2px dashed var(--primary-color);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  background-color: rgba(52,152,219,0.05);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.dropzone.active {
+  border-color: var(--primary-dark);
+  background-color: rgba(52,152,219,0.1);
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.file-info p {
+  font-weight: 600;
+  color: var(--primary-color);
+  margin: 0;
+  padding-right: 40px;
+  animation: pulse 2s infinite;
+}
+
+.remove-file-btn {
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.remove-file-btn:hover {
+  background-color: #c0392b;
+  transform: translateY(-50%) scale(1.2);
+}
+
+.upload-button {
+  background-color: var(--primary-color);
+  padding: 14px 36px;
+  border-radius: 50px;
+  font-weight: 600;
+  color: white;
+  border: none;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.upload-button:hover:not(:disabled) {
+  background-color: var(--primary-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.upload-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@media (max-width: 768px) {
+  .upload-container { width: 90%; padding: 2rem 1rem; }
+  .upload-container h1 { font-size: 2rem; }
+  .dropzone { height: 150px; }
+  .file-info { flex-direction: column; }
+  .remove-file-btn { position: static; margin-top: 10px; transform: none; }
+}

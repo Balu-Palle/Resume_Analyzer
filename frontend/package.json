@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "resume-analyzer",
   "private": true,
   "version": "0.0.0",
@@ -27,9 +26,5 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^15.15.0",
     "vite": "^6.2.0"
-=======
-  "dependencies": {
-    "react-router-dom": "^7.4.0"
->>>>>>> d65a29d290929c563141cb30bec555630be4ebcf
   }
 }
